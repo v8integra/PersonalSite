@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Keith Francis · AI Engineer</title>
+  <meta name="description" content="Keith Francis is an AI Engineer and Marine Corps veteran who builds apps with local LLMs, retrieval-augmented generation and MCP tools, and tests them like production code.">
+  <link rel="canonical" href="https://v8integra.github.io/PersonalSite/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Keith Francis · AI Engineer">
+  <meta property="og:description" content="AI apps built with local LLMs, RAG and MCP tools, tested like production code.">
+  <meta property="og:url" content="https://v8integra.github.io/PersonalSite/">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#F3F6F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D151B" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    // Apply a saved theme before first paint so the page doesn't flash.
+    try { const t = JSON.parse(localStorage.getItem("theme")); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Keith Francis",
+    "jobTitle": "AI Engineer",
+    "url": "https://v8integra.github.io/PersonalSite/",
+    "email": "mailto:keith.francis83@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Aurora", "addressRegion": "CO", "addressCountry": "US" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Denver" },
+      { "@type": "CollegeOrUniversity", "name": "Colorado State University" }
+    ],
+    "sameAs": [
+      "https://github.com/v8integra",
+      "https://www.linkedin.com/in/keith-francis-034991a4/"
+    ]
+  }
+  </script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#main">keith<span>francis</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#process">How I build</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="tool-btn palette-btn" id="openPalette" type="button" aria-label="Open command palette"><kbd>Ctrl</kbd><kbd>K</kbd></button>
+    <button class="tool-btn trophy-btn" id="openTrophies" type="button" aria-label="Open achievements"><span aria-hidden="true">★</span> <span class="count" id="trophyCount">0/8</span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Keith Francis · AI Engineer</p>
+        <h1>I build AI apps and test them like production code.</h1>
+        <p class="lede">Full-stack TypeScript engineer and 12-year Marine Corps veteran. I spent three and a half years making a Capital One platform more reliable. Now I build with local LLMs, retrieval-augmented generation and MCP tools, and I hold that work to the same testing standard.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See the projects</a>
+          <a class="btn ghost" href="Keith_Francis_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+        </div>
+        <div class="proof">
+          <div><b>50% → 100%</b><span>failover test pass rate</span></div>
+          <div><b>80% → 95%</b><span>unit test coverage</span></div>
+          <div><b>15 → 2 min</b><span>per isolation test run</span></div>
+        </div>
+      </div>
+      <button class="teaser" type="button" id="teaser" aria-label="Open the command palette">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><span class="p">&gt;</span> help</span>
+        <span class="dim">projects · open &lt;name&gt; · resume · contact · theme</span>
+        <span class="dim">…or ask a plain question, like "what stack do you use?"</span>
+        <span class="last"><span class="p">&gt;</span> <span class="caret"></span></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Projects</h2>
+        <p>Ordered by how much AI engineering is in them. Open each one for the details.</p>
+      </div>
+      <div class="projects">
+
+        <article class="proj" data-id="docstew">
+          <div class="proj-top"><h3>DocStew</h3><span class="kind">Desktop app</span></div>
+          <p class="sum">A local-first AI document studio covering 9 document types, including notes, PDF, Word and spreadsheets.</p>
+          <p class="ai-line"><b>AI</b>One shared local-LLM layer (Ollama) gives every document type retrieval-augmented Q&amp;A, summaries and translation, backed by an embedding index built from scratch.</p>
+          <ul class="tags"><li>TypeScript</li><li>Electron</li><li>SQLite</li><li>Ollama</li><li>RAG</li></ul>
+          <a class="repo" href="https://github.com/v8integra/DocStew" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <details><summary>Details</summary><ul>
+            <li>Modular, plugin-based editor architecture with 284 passing automated tests.</li>
+            <li>Full-text search alongside the embedding index.</li>
+            <li>Built with Claude Code and checked against the running app, which caught CSP violations, native-module ABI mismatches and async race conditions before the Windows installer shipped.</li>
+          </ul></details>
+        </article>
+
+        <article class="proj" data-id="worldbuilder">
+          <div class="proj-top"><h3>AIWorldBuilder</h3><span class="kind">UE 5.8 plugin</span></div>
+          <p class="sum">An Unreal Engine editor plugin that lets AI agents build game worlds from prompts.</p>
+          <p class="ai-line"><b>AI</b>Extends Epic's Unreal MCP server with landscape, PCG and capture toolsets an agent can call.</p>
+          <ul class="tags"><li>C++</li><li>MCP</li><li>Unreal Engine 5</li><li>Claude Code</li></ul>
+          <details><summary>Details</summary><ul>
+            <li>Agents can create and sculpt landscapes on their own undoable edit layer.</li>
+            <li>Capture tools let the agent look at what it built and correct it.</li>
+            <li>Built phase by phase, each tested in MCP Inspector and in Claude Code.</li>
+          </ul></details>
+        </article>
+
+        <article class="proj" data-id="jobexplorer">
+          <div class="proj-top"><h3>Job Explorer</h3><span class="kind">Desktop app</span></div>
+          <p class="sum">A job search app for Windows, headed for the Microsoft Store. It helps you search and track jobs; it never auto-applies.</p>
+          <p class="ai-line"><b>AI</b>Local AI through Ollama by default, with the model picked by hardware tier. Claude, OpenAI and Gemini are optional, by API key only.</p>
+          <ul class="tags"><li>Electron</li><li>TypeScript</li><li>React</li><li>Ollama</li><li>SQLCipher</li></ul>
+          <details><summary>Details</summary><ul>
+            <li>Profile, data blocks and a résumé library stored in an encrypted local database.</li>
+            <li>Keys protected with Windows DPAPI, with no master password to forget.</li>
+            <li>Built and verified in phases with unit tests and end-to-end runs of the packaged app.</li>
+          </ul></details>
+        </article>
+
+        <article class="proj" data-id="hackersocket">
+          <div class="proj-top"><h3>HackerSocket</h3><span class="kind">Web platform</span></div>
+          <p class="sum">A developer social platform with a job board split into entry, mid and senior tiers, so junior listings don't get buried.</p>
+          <p class="ai-line"><b>Built</b>From scratch on the Next.js App Router, with credentials and GitHub OAuth sign-in and automatic account linking.</p>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Prisma</li></ul>
+          <a class="repo" href="https://github.com/v8integra/hackersocket" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <details><summary>Details</summary><ul>
+            <li>Post feed with likes, private bookmarks, following and direct messages with per-user "delete for me."</li>
+            <li>Self-service account deletion and verified-email linking to meet CCPA-style privacy requirements.</li>
+          </ul></details>
+        </article>
+
+        <article class="proj" data-id="bramblewood">
+          <div class="proj-top"><h3>Bank of Bramblewood</h3><span class="kind">3D web app</span></div>
+          <p class="sum">A fictional bank you walk through as a 3D world, backed by a real banking API.</p>
+          <p class="ai-line"><b>AI</b>Built end to end with an AI coding agent, with Playwright and axe checks guarding every phase.</p>
+          <ul class="tags"><li>Three.js</li><li>Fastify</li><li>Prisma</li><li>SQLite</li><li>Playwright</li></ul>
+          <details><summary>Details</summary><ul>
+            <li>Accounts, sessions, CSRF protection and optional two-factor sign-in.</li>
+            <li>Accessibility checklist with automated axe scans on every end-to-end spec.</li>
+            <li>Production runs as a single Node process serving the API and the built site.</li>
+          </ul></details>
+        </article>
+
+        <article class="proj" data-id="bindervault">
+          <div class="proj-top"><h3>BinderVault</h3><span class="kind">Desktop app</span></div>
+          <p class="sum">An offline, encrypted emergency binder for families: contacts, documents and instructions in one place.</p>
+          <p class="ai-line"><b>AI</b>Planned and built with agents across 14 phases, with usability testing by non-technical people next.</p>
+          <ul class="tags"><li>Electron</li><li>Encryption</li><li>Offline-first</li></ul>
+          <details><summary>Details</summary><ul>
+            <li>Works with no internet connection at all.</li>
+            <li>Designed for people who aren't comfortable with technology.</li>
+            <li>Headed for the Microsoft Store.</li>
+          </ul></details>
+        </article>
+
+      </div>
+      <p class="side">Side projects: BagBorders, TrailBeacon, NodeFinder and RankSwap, quality-of-life addons for World of Warcraft written in Lua.</p>
+    </div>
+  </section>
+
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How I build with AI</h2>
+        <p>I use coding agents for most of the typing. The planning, the checks and the final call stay with me.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Spec</h3><p>Write the product spec: who it's for, what it must never do, which AI providers are allowed.</p></li>
+        <li><span class="n">2</span><h3>Phase plan</h3><p>Split the spec into phases small enough to build and check in one sitting.</p></li>
+        <li><span class="n">3</span><h3>Build with agents</h3><p>Pair with Claude Code on one phase at a time, recording decisions as they're made.</p></li>
+        <li><span class="n">4</span><h3>Verify</h3><p>Unit and end-to-end tests, accessibility scans, then a check of every change in the running app.</p></li>
+        <li><span class="n">5</span><h3>Review &amp; commit</h3><p>I test each phase by hand and commit it myself before the next one starts.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2>Experience</h2></div>
+      <div class="timeline">
+        <article class="job">
+          <p class="when">Mar 2022 – Sep 2025<br>Remote</p>
+          <div>
+            <h3>Full-Stack Engineer</h3>
+            <p class="org">Capital One · contractor through Cognixia</p>
+            <ul>
+              <li>Maintained "Foundation," an internal React/Vue platform hosting partner apps that teams across Capital One used to plan customer sales and communication events.</li>
+              <li>Owned regional isolation (failover) testing, a regulatory requirement for banks. Raised the pass rate from 50% to 100% and moved the platform from a 15-minute Gold to a 5-minute Platinum isolation rating.</li>
+              <li>Co-developed a Python script that automated isolation testing in AWS, cutting each run from about 15 minutes to about 2.</li>
+              <li>Took over the testing program: unit coverage from 80% to 95% (Jest, Vitest) and 100% end-to-end coverage in Cypress.</li>
+              <li>Led the Node.js 14 → 18 migration, guided several teams through Node 20, and moved the build to Vite, saving about 15 minutes per deployment.</li>
+              <li>Mentored 4 associate engineers; 2 were promoted to Senior Software Engineer.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">Jun 2002 – Dec 2014<br>Jacksonville, NC</p>
+          <div>
+            <h3>Sergeant (E-5)</h3>
+            <p class="org">United States Marine Corps</p>
+            <h4>Lean Six Sigma Senior Instructor · 4 years</h4>
+            <ul>
+              <li>Trained and certified Lean Six Sigma instructors and Yellow and Green Belt practitioners for the Navy and Marine Corps.</li>
+              <li>Built process-evaluation tools and a just-in-time refresher system to keep practitioners proficient.</li>
+            </ul>
+            <h4>Calibration Technician · 8 years</h4>
+            <ul>
+              <li>Calibrated and repaired test equipment for fixed- and rotary-wing avionics, from torque and pressure gear to radar and weapons system test sets.</li>
+              <li>Qualified at Level 4 in four calibration disciplines and Level 2 in Microwave.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="creds">
+        <div><h3>Education</h3><ul>
+          <li>M.S. Information and Communications Technology<small>Web Design and Development · University of Denver, 2021</small></li>
+          <li>B.S. Computer Science<small>Human-Centered Computing · Colorado State University, 2019</small></li>
+        </ul></div>
+        <div><h3>Certifications</h3><ul>
+          <li>AI Engineering and AI for Web Developers<small>Scrimba, 2026</small></li>
+          <li>Google AI<small>Google, 2026</small></li>
+          <li>Lean Six Sigma Green Belt<small>Department of Defense, 2014</small></li>
+          <li>Secret and Top Secret clearance<small>Previously held, inactive since 2015</small></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head"><h2>Skills</h2></div>
+      <div class="skills">
+        <div><h3>AI</h3><ul><li>Ollama and local LLMs</li><li>Retrieval-augmented generation</li><li>Embeddings and semantic search</li><li>Claude and Gemini APIs, Google AI Studio</li><li>MCP servers and agent tools</li><li>Agentic coding with Claude Code</li></ul></div>
+        <div><h3>Apps</h3><ul><li>TypeScript, JavaScript, Python, Java, SQL</li><li>React, Vue.js, Next.js</li><li>Node.js, Express, Fastify, REST APIs</li><li>Electron desktop apps</li><li>PostgreSQL, Prisma, SQLite</li><li>AWS</li></ul></div>
+        <div><h3>Testing and build</h3><ul><li>Jest and Vitest</li><li>Cypress and Playwright</li><li>Accessibility scans with axe</li><li>Resiliency and failover testing</li><li>Vite</li><li>Git and GitHub</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Contact</h2>
+        <p>Open to AI Engineer roles. Based in Aurora, Colorado, and open to remote work.</p>
+      </div>
+      <div class="contact-row">
+        <a class="email" id="email" href="mailto:keith.francis83@gmail.com">keith.francis83@gmail.com</a>
+        <button class="btn primary" type="button" id="copyEmail">Copy email</button>
+        <a class="btn ghost" href="https://github.com/v8integra" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/keith-francis-034991a4/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Keith Francis</span><span>Psst: try the Konami code.</span></div></footer>
+
+<div class="overlay" id="paletteOverlay" hidden>
+  <div class="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="bar"><span class="p" aria-hidden="true">&gt;</span><input id="pInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type a command or ask a question" aria-label="Command or question"><span class="esc">esc</span></div>
+    <div class="out" id="pOut" aria-live="polite"></div>
+    <ul class="cmds" id="pList" role="listbox" aria-label="Commands"></ul>
+    <div class="foot">↑↓ choose · Enter run · Answers are pre-written, not generated</div>
+  </div>
+</div>
+
+<div class="overlay" id="trophyOverlay" hidden>
+  <div class="trophies" role="dialog" aria-modal="true" aria-labelledby="tTitle">
+    <div class="head"><h2 id="tTitle">Achievements</h2><button class="close-x" type="button" id="closeTrophies">close</button></div>
+    <p class="t-summary" id="tSummary"></p>
+    <div class="meter"><i id="tMeter"></i></div>
+    <ul class="tlist" id="tList"></ul>
+  </div>
+</div>
+
+<div class="toast hide" id="toast" role="status" aria-live="polite"><span class="badge" aria-hidden="true">★</span><div><small>Achievement unlocked</small><b id="toastName"></b></div></div>
+</body>
+</html>
